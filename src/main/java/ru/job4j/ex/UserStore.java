@@ -34,8 +34,6 @@ public class UserStore {
             e.printStackTrace();
         } catch (UserNotFoundException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
