@@ -10,7 +10,13 @@ import static org.junit.Assert.*;
 public class PhoneDictionaryTest {
 
     @Test
-    public void add() {
+    public void whenFindByNameFault() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+        );
+        ArrayList<Person> persons = phones.find("12");
+        assertThat(persons.size(), is(0));
     }
 
     @Test
