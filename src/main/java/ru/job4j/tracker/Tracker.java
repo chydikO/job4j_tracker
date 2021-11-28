@@ -9,7 +9,6 @@ public class Tracker {
     private int ids = 1;
     private int size = 0;
 
-    //добавление заявок
     public Item add(Item item) {
         item.setId(ids++);
         items[size++] = item;
@@ -27,7 +26,6 @@ public class Tracker {
         return rsl;
     }
 
-    //получение заявки по id
     public Item findById(int id) {
         /* Находим индекс */
         int index = indexOf(id);
@@ -57,7 +55,6 @@ public class Tracker {
         return false;
     }
 
-    //получение списка всех заявок
      public Item[] findAll() {
          ArrayList<Item> itemsList = new ArrayList<>();
          for (Item item: items) {
@@ -68,7 +65,6 @@ public class Tracker {
          return itemsList.toArray(new Item[0]);
     }
 
-     //получение списка по имени
      public Item[] findByName(String key) {
         ArrayList<Item> itemsList = new ArrayList<>();
          for (int index = 0; index < size; index++) {
