@@ -3,23 +3,23 @@ package ru.job4j.tracker;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Tracker {
-    private final Item[] items = new Item[100];
+    private final List<Item> items = new ArrayList<>();
     private int ids = 1;
-    private int size = 0;
 
     public Item add(Item item) {
         item.setId(ids++);
-        items[size++] = item;
+        items.add(item);
         return item;
     }
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (int index = 0; index < size; index++) {
-            if (items[index].getId() == id) {
-                rsl = index;
+        for (Item item: items) {
+            if (item.getId() == id) {
+                rsl = items.indexOf(item);
                 break;
             }
         }
@@ -30,7 +30,7 @@ public class Tracker {
         /* Находим индекс */
         int index = indexOf(id);
         /* Если индекс найден возвращаем item, иначе null */
-        return index != -1 ? items[index] : null;
+        return index != -1 ? items.get(index) : null;
     }
 
     public boolean replace(int id, Item item) {
@@ -38,7 +38,7 @@ public class Tracker {
         int index = indexOf(id);
         if (index != -1) {
             item.setId(id);
-            items[index] = item;
+            items.set(index, item);
             result = true;
         }
         return result;
@@ -47,9 +47,7 @@ public class Tracker {
     public boolean delete(int id) {
         int index = indexOf(id);
         if (index != -1) {
-            System.arraycopy(items, index + 1, items, index, size - index - 1);
-            items[size - 1] = null;
-            size--;
+            items.remove(index);
             return true;
         }
         return false;
@@ -67,9 +65,9 @@ public class Tracker {
 
      public Item[] findByName(String key) {
         ArrayList<Item> itemsList = new ArrayList<>();
-         for (int index = 0; index < size; index++) {
-             if (key.equals(items[index].getName())) {
-                itemsList.add(items[index]);
+         for (Item item: items) {
+             if (key.equals(item.getName())) {
+                 itemsList.add(item);
              }
          }
          return itemsList.toArray(new Item[0]);
