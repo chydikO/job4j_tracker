@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class PhoneDictionaryTest {
 
     @Test
-    public void whenFindByNameFault() {
+    public void whenNoFindByKeyThenEmptyList() {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
