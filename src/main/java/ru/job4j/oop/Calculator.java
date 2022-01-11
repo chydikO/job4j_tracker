@@ -12,7 +12,7 @@ public class Calculator {
     }
 
     public static int minus(int y) {
-        return x - y;
+        return y - x;
     }
 
     public int divide(int y) {
@@ -33,10 +33,11 @@ public class Calculator {
         rsl = minus(3);
         System.out.println(rsl);
 
-        rsl = new Calculator().divide(2);
+        Calculator calculator = new Calculator();
+        rsl = calculator.divide(2);
         System.out.println(rsl);
 
-        rsl = new Calculator().sumAllOperation(5);
+        rsl = calculator.sumAllOperation(5);
         System.out.println(rsl);
     }
 }
