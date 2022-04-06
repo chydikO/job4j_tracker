@@ -1,8 +1,6 @@
 package ru.job4j.tracker;
 
-import java.awt.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Tracker {

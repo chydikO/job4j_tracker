@@ -5,8 +5,6 @@ import ru.job4j.oop.Bus;
 import ru.job4j.oop.Train;
 import ru.job4j.oop.Vehicle;
 
-import java.lang.invoke.VarHandle;
-
 public class Traffic {
     public static void main(String[] args) {
         Vehicle train = new Train();

@@ -3,8 +3,6 @@ package ru.job4j.oop;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class PointTest {
     @Test
     public void whenPoint2toPoint2then22() {
