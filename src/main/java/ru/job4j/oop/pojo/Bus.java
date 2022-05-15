@@ -1,6 +1,6 @@
 package ru.job4j.oop.pojo;
 
-public class Bus implements Transport{
+public class Bus implements Transport {
     @Override
     public void move() {
         System.out.println("Bus move");

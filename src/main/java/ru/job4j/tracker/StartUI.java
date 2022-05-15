@@ -8,6 +8,7 @@ public class StartUI {
     public StartUI(Output out) {
         this.out = out;
     }
+
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
         while (run) {

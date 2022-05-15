@@ -10,7 +10,7 @@ public class UsageMap {
         hashMap.put("veuppeifiddeifrau-9642@yopmail.com ", "Кудрявцев Иван Александрович");
         hashMap.put("frannazotretra-9119@yopmail.com ", "Зубова Валерия Никитична");
 
-        for (Map.Entry<String, String> entry: hashMap.entrySet() ) {
+        for (Map.Entry<String, String> entry: hashMap.entrySet()) {
             String key = entry.getKey();
             System.out.println("e-mail: " + key + " Name: " + hashMap.get(key));
         }

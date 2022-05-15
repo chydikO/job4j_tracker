@@ -44,6 +44,11 @@ public class Item {
 
     @Override
     public String toString() {
-        return ("Item id: " + getId() + ", Name: " + getName() + ", created: " + created.format(FORMATTER));
+        return ("Item id: "
+                + getId()
+                + ", Name: "
+                + getName()
+                + ", created: "
+                + created.format(FORMATTER));
     }
 }
