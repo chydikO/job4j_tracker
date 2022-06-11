@@ -23,8 +23,7 @@ public class OrderConvertTest {
         List<Order> orders = new ArrayList<>();
         orders.add(new Order("3sfe", "Dress"));
         orders.add(new Order("3sfe", "Dress12"));
-        orders.add(new Order("3asd", "Dress123"));
         HashMap<String, Order> map = OrderConvert.process(orders);
-        assertThat(map.get("3sfe"), is(new Order("3sfe", "Dress")));
+        assertThat(map.size(), is(1));
     }
 }
