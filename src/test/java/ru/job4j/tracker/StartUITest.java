@@ -138,7 +138,7 @@ public class StartUITest {
                         + "=== Show all items ===="
                         + System.lineSeparator()
         );
-        ArrayList<Item> items = tracker.findAll();
+        List<Item> items = tracker.findAll();
         for (Item item : items) {
             result.append(item.toString());
         }
