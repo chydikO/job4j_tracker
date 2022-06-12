@@ -25,9 +25,7 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-        /* Находим индекс */
         int index = indexOf(id);
-        /* Если индекс найден возвращаем item, иначе null */
         return index != -1 ? items.get(index) : null;
     }
 
@@ -51,23 +49,23 @@ public class Tracker {
         return false;
     }
 
-     public Item[] findAll() {
+     public ArrayList<Item> findAll() {
          ArrayList<Item> itemsList = new ArrayList<>();
          for (Item item: items) {
              if (item != null && item.getName() != null) {
                  itemsList.add(item);
              }
          }
-         return itemsList.toArray(new Item[0]);
+         return itemsList;
     }
 
-     public Item[] findByName(String key) {
+     public ArrayList<Item> findByName(String key) {
         ArrayList<Item> itemsList = new ArrayList<>();
          for (Item item: items) {
              if (key.equals(item.getName())) {
                  itemsList.add(item);
              }
          }
-         return itemsList.toArray(new Item[0]);
+         return itemsList;
      }
 }
