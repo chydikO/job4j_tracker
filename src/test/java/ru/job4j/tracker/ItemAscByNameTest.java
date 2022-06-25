@@ -21,6 +21,6 @@ public class ItemAscByNameTest {
         List<Item> expected = new ArrayList<>(List.of(item2, item1, item3));
 
         Collections.sort(items, new ItemAscByName());
-        assertTrue(items.size() == expected.size() && items.containsAll(expected));
+        assertTrue(items.containsAll(expected));
     }
 }

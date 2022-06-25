@@ -19,6 +19,6 @@ public class ItemDescByNameTest {
         List<Item> items = new ArrayList<>(List.of(item1, item2, item3));
         List<Item> expected = new ArrayList<>(List.of(item3, item1, item2));
         Collections.sort(items, new ItemDescByName());
-        assertTrue(items.size() == expected.size() && items.containsAll(expected));
+        assertTrue(items.containsAll(expected));
     }
 }
